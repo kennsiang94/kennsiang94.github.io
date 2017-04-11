@@ -466,19 +466,34 @@
           <div class="col-md-6">
             <div class="contact-form">
               <strong>Send me a message</strong>
-              <form name="contact-form" id="contactForm" method="POST" action="http://formspree.io/kennsiang94@gmail.com">
+              <form name="contact-form" id="contactForm" action="https://formspree.io/kennsiang94@gmail.com" method="POST">
+
                 <div class="form-group">
-                  <input name="name" class="form-control" type="name" name="name" placeholder="Name">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required="">
                 </div>
+
                 <div class="form-group">
-                  <input name="email" class="form-control" type="email" name="email" placeholder="Your email">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" required="">
                 </div>
+
                 <div class="form-group">
-                  <textarea name="message" class="form-control" name="message" placeholder="Your message"></textarea>
+                  <label for="subject">Subject</label>
+                  <input type="text" name="subject" class="form-control" id="subject">
                 </div>
+
                 <div class="form-group">
-                  <button type="submit" class="btn btn-primary">Send</button>
-                  </div>
+                  <label for="message">Message</label>
+                  <textarea name="message" class="form-control" id="message" rows="5" required=""></textarea>
+                </div>
+
+                <button type="submit" name="submit" onclick="myFunction()" class="btn btn-primary">Send Message</button>
+        <script>
+function myFunction() {
+    alert("Thanks for getting in touch me. I will reply you shortly :)");
+}
+</script>
               </form>
               <!--
               <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
